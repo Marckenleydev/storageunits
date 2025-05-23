@@ -34,9 +34,9 @@ services:
     volumes:
       - ./server:/app
       - /app/node_modules
-    command: sh -c "npx prisma generate && npx prisma db push && npm run dev"
+    command: npm run dev
 
-  # Optional: Add client service if needed
+ 
   client:
     build:
       dockerfile: Dockerfile
