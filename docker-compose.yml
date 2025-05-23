@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: helloworld
+      POSTGRES_DB: storageunit
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: ./server  # Changed from ./unitstorage to ./server
+    container_name: storage-server
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: "postgresql://postgres:helloworld@postgres-db:5432/storageunit?schema=public"
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    command: sh -c "npx prisma generate && npx prisma db push && npm run dev"
+
+  # Optional: Add client service if needed
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    container_name: storage-client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    command: npm run dev
+
+volumes:
+  postgres-data:
