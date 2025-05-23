@@ -82,7 +82,7 @@ The frontend application will start at http://localhost:3000
 To book a storage unit:
 
 1. **Browse Available Units**
-   - Navigate to the Units page to view all available storage units
+   - Navigate to the Book a Unit page to view all available storage units
    - Filter by size, location, or price as needed
 
 2. **Select a Unit**
