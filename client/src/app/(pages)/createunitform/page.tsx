@@ -11,7 +11,7 @@ type Props = {
   onError?: (error: string) => void;
 }
 
-const CreateUnitForm = ({ onSuccess }: Props) => {
+const CreateUnitForm = ({ onSuccess, onError }: Props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<CreateUnitData>({
     name: "",
@@ -56,6 +56,10 @@ const CreateUnitForm = ({ onSuccess }: Props) => {
     } catch (error: any) {
 
       console.error('Error creating unit:', error);
+      
+      if(onError){
+        toast.error("Error creating unit")
+      }
     } finally {
       setIsLoading(false);
     }

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "unit_001",
+    "name": "Martişna",
+    "size": "Small",
+    "location": "Dubai Marina",
+    "pricePerDay": 25.5,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_002",
+    "name": "Blue Haven",
+    "size": "Medium",
+    "location": "Dubai Hills",
+    "pricePerDay": 35.0,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_003",
+    "name": "Palm View",
+    "size": "Large",
+    "location": "Palm Jumeirah",
+    "pricePerDay": 45.5,
+    "isAvailable": false
+  },
+  {
+    "id": "unit_004",
+    "name": "Desert Rose",
+    "size": "Small",
+    "location": "Dubai Hills",
+    "pricePerDay": 28.0,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_005",
+    "name": "Marina Luxe",
+    "size": "Medium",
+    "location": "Dubai Marina",
+    "pricePerDay": 38.5,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_006",
+    "name": "Business Bay",
+    "size": "Large",
+    "location": "Business Bay",
+    "pricePerDay": 50.0,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_007",
+    "name": "Creek View",
+    "size": "Small",
+    "location": "Dubai Marina",
+    "pricePerDay": 26.5,
+    "isAvailable": false
+  },
+  {
+    "id": "unit_008",
+    "name": "Golden Sands",
+    "size": "Medium",
+    "location": "Dubai Hills",
+    "pricePerDay": 32.0,
+    "isAvailable": true
+  },
+  {
+    "id": "unit_009",
+    "name": "Sky High",
+    "size": "Large",
+    "location": "Dubai Marina",
+    "pricePerDay": 55.0,
+    "isAvailable": true
+  }
+]

@@ -50,7 +50,7 @@ export default function HomePage() {
         <div className="text-red-600 text-lg mb-4">{error}</div>
         <button
           onClick={fetchUnits}
-          className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md transition-colors"
+          className="bg-primary-600 hover:bg-primary-700 text-black px-6 py-2 rounded-md transition-colors"
         >
           Try Again
         </button>
@@ -75,7 +75,7 @@ export default function HomePage() {
 
       {/* Units Grid */}
       {units.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10">
           {units.map((unit) => (
             
             <UnitCard key={unit.id} unit={unit} />

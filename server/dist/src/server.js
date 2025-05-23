@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 app.use("/units", units_1.default);
 app.use("/", bookings_1.default);
-const PORT = Number(process.env.PORT) || 3003;
+const PORT = Number(process.env.PORT) || 8008;
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on port ${PORT}`);
 });

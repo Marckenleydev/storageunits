@@ -9,7 +9,7 @@ function calculateDays(startDate: string | Date, endDate: string | Date): number
   const end = new Date(endDate);
   const diffTime = Math.abs(end.getTime() - start.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  return diffDays || 1; // Minimum 1 day
+  return diffDays || 1; 
 }
 
 async function checkBookingConflict(

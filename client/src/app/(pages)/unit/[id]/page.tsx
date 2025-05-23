@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useParams } from "next/navigation";
 import { bookingsApi, storageUnitsApi } from "@/utils/api";
+import { toast } from "sonner";
 
 // Define the booking form data type
 interface BookUnitFormData {
@@ -23,7 +24,7 @@ type Props = {
 
 const BookUnitForm = ({ currentUserName = "", onSuccess, onError }: Props) => {
   const { id } = useParams<{ id: string }>();
-  console.log(id)
+
   const [isLoading, setIsLoading] = useState(false);
   const [unitDetails, setUnitDetails] = useState<any>(null);
   
@@ -88,7 +89,7 @@ const BookUnitForm = ({ currentUserName = "", onSuccess, onError }: Props) => {
         endDate: formData.endDate.toISOString().split('T')[0]
       };
 
-      console.log(bookingData)
+     // console.log(bookingData)
 
       const createdBooking = await bookingsApi.createBooking(bookingData);
       
@@ -96,8 +97,8 @@ const BookUnitForm = ({ currentUserName = "", onSuccess, onError }: Props) => {
       if (onSuccess) {
         onSuccess(createdBooking);
       }
-
-      console.log('Booking created successfully:', createdBooking);
+     toast.success("Booking created successfully")
+     // console.log('Booking created successfully:', createdBooking);
 
     } catch (error: any) {
       const errorMessage = error.response?.data?.error || error.response?.data?.message || 'Failed to create booking';
@@ -106,7 +107,8 @@ const BookUnitForm = ({ currentUserName = "", onSuccess, onError }: Props) => {
         onError(errorMessage);
       }
 
-      console.error('Error creating booking:', error);
+     // console.error('Error creating booking:', error);
+      toast.success("Unit is already booked for the selected dates")
     } finally {
       setIsLoading(false);
     }

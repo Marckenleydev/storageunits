@@ -1,0 +1,50 @@
+[
+  {
+    "id": "book_001",
+    "userName": "Marckenley",
+    "unitId": "unit_001",
+    "startDate": "2024-06-15",
+    "endDate": "2024-06-20",
+    "status": "completed"
+  },
+  {
+    "id": "book_002",
+    "userName": "Marckenley",
+    "unitId": "unit_003",
+    "startDate": "2024-07-01",
+    "endDate": "2024-07-05",
+    "status": "completed"
+  },
+  {
+    "id": "book_003",
+    "userName": "Marckenley",
+    "unitId": "unit_005",
+    "startDate": "2024-08-10",
+    "endDate": "2024-08-15",
+    "status": "completed"
+  },
+  {
+    "id": "book_004",
+    "userName": "Tyrese",
+    "unitId": "unit_002",
+    "startDate": "2025-06-20",
+    "endDate": "2025-06-25",
+    "status": "confirmed"
+  },
+  {
+    "id": "Tyrese",
+    "userName": "Marckenley",
+    "unitId": "unit_004",
+    "startDate": "2025-07-15",
+    "endDate": "2025-07-20",
+    "status": "confirmed"
+  },
+  {
+    "id": "book_006",
+    "userName": "Tyrese",
+    "unitId": "unit_006",
+    "startDate": "2025-08-01",
+    "endDate": "2025-08-10",
+    "status": "pending"
+  }
+]

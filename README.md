@@ -61,6 +61,8 @@ cd server
 # Generate Prisma client
 npx prisma generate
 
+npm run seed
+
 Running the Application
 
 Development Mode
