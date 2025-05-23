@@ -28,7 +28,12 @@ export interface StorageUnitWithCount {
     bookings: number;
   };
 }
-
+export interface BookUnitFormData {
+  userName: string;
+  unitId: string;
+  startDate: Date;
+  endDate: Date;
+}
 export interface StorageUnitFilters {
   locations: string[];
   sizes: string[];

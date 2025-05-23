@@ -6,16 +6,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useParams } from "next/navigation";
 import { bookingsApi, storageUnitsApi } from "@/utils/api";
 import { toast } from "sonner";
+import { BookUnitFormData } from "@/app/types";
 
-// Define the booking form data type
-interface BookUnitFormData {
-  userName: string;
-  unitId: string;
-  startDate: Date;
-  endDate: Date;
-}
 
-// Props type for the component
+
+
 type Props = {
   currentUserName?: string;
   onSuccess?: (booking: any) => void;
