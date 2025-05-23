@@ -76,3 +76,18 @@ Open a new terminal:
 bashcd client
 npm run dev
 The frontend application will start at http://localhost:3000
+
+# Booking Process
+
+To book a storage unit:
+
+1. **Browse Available Units**
+   - Navigate to the Units page to view all available storage units
+   - Filter by size, location, or price as needed
+
+2. **Select a Unit**
+   - Click on any unit card
+   - enter the Name, select start Date and the end Date
+
+3. **Initiate Booking**
+   - Click the "Confirm booking"
